@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)file:///Users/chad/Documents/WomboLive/Home.html#edge -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Wombo-Live.com</title>
+<link rel="stylesheet" media="screen" href="./Wombo-Live.com_files/chicagoflf" type="text/css">
+	<link rel="stylesheet" href="./Wombo-Live.com_files/simplebar.css">
+    <script src="./Wombo-Live.com_files/jquery-3.2.1.slim.min.js"></script>
+    <script src="./Wombo-Live.com_files/cookie.min.js"></script>
+    <script src="./Wombo-Live.com_files/socket.io.slim.js"></script>
+    <script src="file:///Users/chad/Documents/WomboLive/javascript.js"></script>
+    <script src="file:///Users/chad/Documents/WomboLive/node.js"></script>
+	
+	<style>
+		nav {
+	font-family: 'ChicagoFLFRegular';
+    font-weight: lighter;
+    font-style: normal;
+	background-color: #C9F3F4;
+	border: 2px solid #3D5BA9;
+	margin-top: -10px;
+	margin-left: -10px;
+	margin-right: -7px;
+	height: 20px;
+	width: 100px;
+	z-index: 10;
+	position: fixed;
+	width: 100%;
+		}
+		
+		.h1 {
+	margin-top: 20px;
+	margin-left: 20px;
+		}
+	
+		body {
+			background-color: #CBE2FA;
+			overflow: auto;
+            display: block;
+			}
+		
+		.logline {
+	background-color: #C9F3F4;
+	margin-top: 150px;
+	margin-left: 650px;
+	margin-bottom: 10px;
+	padding: 25, 0, 25,;
+	position: fixed;
+    z-index: 9;
+    border: 3px solid #3D5BA9;
+	height: 560px;
+    width: 315px;   
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     }
+		
+    .iconbox {
+	background-color: #C9F3F4;
+	margin-top: 150px;
+	margin-left: 15px;
+	margin-bottom: 10px;
+	padding: 25, 0, 25,;
+	position: fixed;
+    z-index: 9;
+    border: 3px solid #3D5BA9;
+	height: 315px;
+    width: 560px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     }
+        
+        #16x9 {
+            z-index: 5;
+        }
+        
+        #9x16 {
+            z-index: 5;
+        }
+		
+    
+        
+        #play {
+           background-color: #CBE2FA;
+            border: none;
+        }
+        
+        #worldwide {
+            float: right;
+            margin-top: 10px;
+        }
+        
+        #hand { 
+            margin-left: 362px;
+        margin-top: -127px;
+            position: fixed;
+        }
+        
+        #recycle{
+            margin-left: 730px;
+          margin-top: -100px;
+            position: fixed;
+            z-index: 15;
+        }
+        
+        
+        #stork {
+            float: right;
+            margin-right: -500px;
+            margin-top: 450px;
+            
+        }
+        
+        #network {
+            float: right;
+            margin-right: -300px;
+            margin-top: 250px;
+        }
+        
+        #vert {
+            float: right;
+            margin-right: -75px;
+            margin-top: 350px;
+        }
+        
+        #logistics {
+            position: absolute;
+           margin-left: 400px;
+            margin-top: 250px;
+        }
+        
+        #www {
+            float: right;
+            margin-right: -550px;
+            margin-top: 650px;
+        }
+        
+        #graph {
+            bottom: -5px;
+            margin-left: 450px;
+            position: fixed;
+        }
+        
+          #sports {
+            bottom: 108px;
+            margin-left: 500px;
+            position: fixed;
+        }
+        
+        #barb {
+            bottom: 20px;
+            margin-left: -30px;
+            position: fixed;
+        }
+        
+        #chat {
+          
+              bottom: 0px;
+            margin-left: 100px;
+            position: fixed;
+            z-index: 15;
+        }
+        
+	</style>
+	
+
+<script src="./Wombo-Live.com_files/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="./Wombo-Live.com_files/jquery-ui.min.css">
+	<script src="./Wombo-Live.com_files/jquery-ui.min.js"></script>
+	
+</head>
+<body><nav><div class="h1">
+	<a href="https://womborocks.bandcamp.com/" target="_blank"><img src="images/wombogif.gif" height="100" alt="womborocks"></a>
+    
+ 
+    <button id="play"><img src="images/startbutton.png" height="70" alt="start"></button><br>
+    <div id="hand"><img src="images/handworld.png" width="280" height="171" alt="hand"></div>
+    <div id="recycle"><img src="images/womborecycle.gif" width="75%" height="75%" alt="recycle"></div>
+   
+    </div>
+    
+</nav>
+	
+
+<div class="logline">
+	<video id="9x16" width="315" height="560"><source src="images/Wombo-Live-9-16.mp4" type="video/mp4"></video>
+	</div>
+	
+<div class="iconbox">
+   <video id="16x9" width="560" height="315"><source src="images/Wombo-Live-16-9.mp4" type="video/mp4"></video> </div>
+    
+    <div id="worldwide"><img src="images/worldwide.gif" width="75%" height="75%" alt="worldwide"></div>
+    <div id="network"><img src="images/networksolutions.png" alt="network"></div>
+    <div id="vert"><img src="images/vertworldwide.png" width="157" height="327" alt="vert"></div>
+    <div id="stork"><img src="images/wombostork.png" width="65%" height="65%" alt="stork"></div>
+    <div id="www"><img src="images/womborwww.png" width="65%" height="65%" alt="www"></div>
+    <div id="logistics"><img src="images/wombologistics.png" alt="logistics"></div>
+    <div id="graph"><img src="images/wombograph.gif" width="300" height="300" alt="graph"></div>
+    <div id="sports"><img src="images/womboworldwidelarge.png" width="250" height="82" alt="sportslogo"></div>
+    <div id="barb"><img src="images/wombobarbring.gif" width="35%" height="35%" alt="barb"></div>
+    
+    <div class="chatbox"><video id="chat" width="325" height="325"><source src="images/wombochat.mp4" type="video/mp4"></video></div>
+    
+	
+    
+    <script src="./Wombo-Live.com_files/rivescript.min.js"></script>
+    
+    <script>
+	 const $video1 = document.getElementById('16x9');
+    const $video2 = document.getElementById('9x16');
+    const $video3 = document.getElementById('chat');
+    const $play = document.getElementById('play');
+
+    const playVideo = () => {
+        $video1.play();
+        $video2.play();
+        $video3.play();
+    };
+    
+    $play.addEventListener('click', playVideo);
+    </script>
+       
+    <script>
+var vid = document.getElementById("16x9");
+
+function enableMute() { 
+    vid.muted = true;
+}
+</script>
+    
+    
+    
+<script>$(function(){
+	$('.iconbox').draggable();		
+		})
+	</script>
+	
+	<script>$(function(){
+	$('.logline').draggable();		
+		})
+	</script>
+	
+	
+<script src="./Wombo-Live.com_files/simplebar.min.js"></script>
+	
+	
+<script>
+		let bot = new RiveScript();</script>
+		<script>
+		const message_container = document.querySelector('.messages');
+const form = document.querySelector('form');
+const input_box = document.querySelector('input');
+		
+		const brains = [
+  'https://gist.githubusercontent.com/chadblevy/b27393620712d44c8e6cddd74b5ac6df/raw/96a6c9a3de2e9b47324740fea22aed3ccb1cd888/womboChat'
+];
+		
+bot.loadFile(brains).then(botReady).catch(botNotReady);
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  selfReply(input_box.value);
+  input_box.value = '';
+});
+
+function botReply(message){
+  message_container.innerHTML += `<div class="bot">${message}</div>`;
+  location.href = '#edge';
+}
+
+function selfReply(message){
+  message_container.innerHTML += `<div class="self">${message}</div>`;
+  location.href = '#edge';
+  
+  bot.reply("local-user", message).then(function(reply) {
+    botReply(reply);
+  });
+}
+
+function botReady(){
+  bot.sortReplies();
+  botReply('Wombo: Sup!');
+}
+
+function botNotReady(err){
+  console.log("An error has occurred.", err);
+}
+	
+	</script>
+
+	
+	<script>
+	var redDiv = document.getElementById('red');
+redDiv.onclick = function (e) {
+  var ev = e || window.event;
+  if(e.target !== this)
+    return;
+  console.log('red div was clicked');}
+    </script>
+    
+
+	
+	
+
+
+	
+	
+
+	
+
+</body></html>
