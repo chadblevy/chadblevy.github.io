@@ -1,308 +1,457 @@
-<!DOCTYPE html>
-<!-- saved from url=(0053)file:///Users/chad/Documents/WomboLive/Home.html#edge -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<title>Wombo-Live.com</title>
-<link rel="stylesheet" media="screen" href="./Wombo-Live.com_files/chicagoflf" type="text/css">
-	<link rel="stylesheet" href="./Wombo-Live.com_files/simplebar.css">
-    <script src="./Wombo-Live.com_files/jquery-3.2.1.slim.min.js"></script>
-    <script src="./Wombo-Live.com_files/cookie.min.js"></script>
-    <script src="./Wombo-Live.com_files/socket.io.slim.js"></script>
-    <script src="file:///Users/chad/Documents/WomboLive/javascript.js"></script>
-    <script src="file:///Users/chad/Documents/WomboLive/node.js"></script>
-	
-	<style>
-		nav {
-	font-family: 'ChicagoFLFRegular';
-    font-weight: lighter;
-    font-style: normal;
-	background-color: #C9F3F4;
-	border: 2px solid #3D5BA9;
-	margin-top: -10px;
-	margin-left: -10px;
-	margin-right: -7px;
-	height: 20px;
-	width: 100px;
-	z-index: 10;
-	position: fixed;
-	width: 100%;
-		}
-		
-		.h1 {
-	margin-top: 20px;
-	margin-left: 20px;
-		}
-	
-		body {
-			background-color: #CBE2FA;
-			overflow: auto;
-            display: block;
-			}
-		
-		.logline {
-	background-color: #C9F3F4;
-	margin-top: 150px;
-	margin-left: 650px;
-	margin-bottom: 10px;
-	padding: 25, 0, 25,;
-	position: fixed;
-    z-index: 9;
-    border: 3px solid #3D5BA9;
-	height: 560px;
-    width: 315px;   
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-     }
-		
-    .iconbox {
-	background-color: #C9F3F4;
-	margin-top: 150px;
-	margin-left: 15px;
-	margin-bottom: 10px;
-	padding: 25, 0, 25,;
-	position: fixed;
-    z-index: 9;
-    border: 3px solid #3D5BA9;
-	height: 315px;
-    width: 560px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-     }
-        
-        #16x9 {
-            z-index: 5;
-        }
-        
-        #9x16 {
-            z-index: 5;
-        }
-		
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fresh_produce</title>
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="jquery-ui.min.css">
+	<script src="jquery-ui.min.js"></script>
     
-        
-        #play {
-           background-color: #CBE2FA;
-            border: none;
-        }
-        
-        #worldwide {
-            float: right;
-            margin-top: 10px;
-        }
-        
-        #hand { 
-            margin-left: 362px;
-        margin-top: -127px;
-            position: fixed;
-        }
-        
-        #recycle{
-            margin-left: 730px;
-          margin-top: -100px;
-            position: fixed;
-            z-index: 15;
-        }
-        
-        
-        #stork {
-            float: right;
-            margin-right: -500px;
-            margin-top: 450px;
+    <style>
+        body {
+            background-image: url("images/notherbg.png");
+            overflow: auto;
+            margin-top: 45px;
             
         }
         
-        #network {
-            float: right;
-            margin-right: -300px;
-            margin-top: 250px;
-        }
+		nav {
+	font-family: 'Helvetica';
+    font-weight: normal;
+    font-style: normal;
+            border: 2px solid #E1E1E1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+	top: 0px;
+	margin-left: -10px;
+	margin-right: -7px;
+	height: 34px;
+	z-index: 10;
+	position: fixed;
+	width: 110%;
+		}
+		
+		.h1 {
+	margin-top: 0px;
+	margin-left: 10px;
+		}
         
-        #vert {
-            float: right;
-            margin-right: -75px;
-            margin-top: 350px;
-        }
-        
-        #logistics {
-            position: absolute;
-           margin-left: 400px;
-            margin-top: 250px;
-        }
-        
-        #www {
-            float: right;
-            margin-right: -550px;
-            margin-top: 650px;
-        }
-        
-        #graph {
-            bottom: -5px;
-            margin-left: 450px;
-            position: fixed;
-        }
-        
-          #sports {
-            bottom: 108px;
-            margin-left: 500px;
-            position: fixed;
-        }
-        
-        #barb {
-            bottom: 20px;
-            margin-left: -30px;
-            position: fixed;
-        }
-        
-        #chat {
-          
-              bottom: 0px;
-            margin-left: 100px;
-            position: fixed;
+        #main {
             z-index: 15;
+            width: auto;
+            height: 750px;
+            background-color: #f9f5b5;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+            opacity: 90%;
+            padding: 10px;
+            margin-top: 0px;
+            overflow: hidden;
+            display: block;
+            
+            
         }
         
-	</style>
-	
-
-<script src="./Wombo-Live.com_files/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="./Wombo-Live.com_files/jquery-ui.min.css">
-	<script src="./Wombo-Live.com_files/jquery-ui.min.js"></script>
-	
+        #spotify {
+            z-index: 20;
+            position: fixed;
+            border: 1px solid #000000;
+            border-style: solid;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+            bottom: 30px;
+            right: 25px;
+            width: 250px;
+            height: 100px;
+            background-color: rgba(220,218,198,1.00)
+        }
+        
+        #spotheader {
+            position: absolute;
+        }
+        
+        #spotifyplayer {
+            margin-top: 20px;
+        }
+        
+        #fpheaderlogo {
+            position: relative;
+            margin-top: 6px;
+            display: block;
+          margin-left: 10px;
+          width: 20%;
+        }
+      
+        
+        #fpheadertext {
+            position: absolute;
+            color: rgba(225,225,225,1.00);
+            margin-top: 7px;
+            margin-left: 5px;
+        }
+        
+        #equiptext {
+            position: absolute;
+            color: rgba(225,225,225,1.00);
+            margin-top: 7px;
+            margin-left: 180px;
+        }
+        
+        #headerlines {
+            margin-top: 0px;
+            width: auto;
+        }
+        #contacttext {
+            position: absolute;
+            color: rgba(225,225,225,1.00);
+            margin-top: 6px;
+            margin-left: 310px;
+        }
+        
+        #border {
+            border: 2px solid rgba(0,0,0,1.00);
+            width: hidden;
+            height: 600px;
+            margin-top: -100px;
+            overflow: auto;
+            padding: 25px;
+           
+        }
+        
+        #equip {
+            z-index: 19;
+            position: absolute;
+            font-family: 'Helvetica';
+            font-weight: normal;
+            font-style: normal;
+            font-size: normal;
+            border: 2px solid rgba(0,0,0,1.00);
+            width: 320px;
+            height: 320px;
+            overflow: hidden;
+            margin-top: 50px;
+            margin-left: 0px;
+            background-color: rgba(220,218,198,1.00);
+            display: none;
+            
+        }
+        
+        #photos {
+            z-index: 15;
+             position: absolute;
+            font-family: 'Helvetica';
+            font-weight: normal;
+            font-style: normal;
+            font-size: normal;
+            border: 2px solid rgba(0,0,0,1.00);
+            width: 320px;
+            height: 320px;
+            overflow: hidden;
+            float: left;
+            margin-top: -10px;
+            margin-left: -10px;background-color: rgba(220,218,198,1.00);
+            display: none;
+        }
+        
+         #contact {
+             z-index: 22;
+             position: absolute;
+            font-family: 'Helvetica';
+            font-weight: normal;
+            font-style: normal;
+            font-size: normal;
+            border: 2px solid rgba(0,0,0,1.00);
+            width: 375px;
+            height: 320px;
+            overflow: hidden;
+            margin-top: 130px;
+            margin-left: -20px;
+             background-color: rgba(220,218,198,1.00);
+             display: none;
+        }
+        
+        #contactform {
+            padding-left: 15px;
+            padding-right: 15px;
+            width: 370px;
+            height: 275px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 15px;
+            overflow: auto;
+        }
+        
+        #spotifytext {
+            font-family: 'Helvetica';
+            
+        }
+        
+        #gear {
+            width: 315px;
+            height: 275px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 15px;
+            overflow: auto;
+        }
+        
+         #pics {
+            width: 320px;
+            height: 275px;
+             background: rgba(249,245,182,1.00);
+             
+        }
+        
+        .close-button-equip {
+            position: absolute;
+			z-index: 16;
+			margin-top: 10px;
+			margin-left: 10px;
+			width: 22px;
+			height: 22px;
+			background-color: #DEDFDF;
+			border: solid 1px;
+			font-size: 12px;
+		}
+        
+        #giflogo {
+            z-index: 10;
+            position: absolute;
+            z-index: 1;
+            left: auto;
+            margin-top: 18px;
+            left: 15%;
+            
+        }
+        
+        #equipgif {
+            margin-top: -50px;
+            margin-left: 0px;
+            
+        }
+        
+        #equipgiftext {
+            font-family: 'Helvetica';
+            margin-left: 35px;
+            margin-top: -15px;
+            display: block;
+            border: 2px solid rgba(0,0,0,1.00);
+            width: 100px;
+            padding-left: 3px;
+        }
+        
+         #studiogif {
+            margin-top: -121px;
+            margin-left: 180px;
+            
+        }
+        
+        #studiogiftext {
+            font-family: 'Helvetica';
+            margin-left: 10px;
+            margin-top: 5px;
+            display: block;
+            border: 2px solid rgba(0,0,0,1.00);
+            width: 100px;
+            padding-left: 18px;
+        }
+        
+        #contactgif {
+            margin-top: -191px;
+            margin-left: 270px;
+        }
+        
+        #contactgiftext {
+            font-family: 'Helvetica';
+            margin-left: 70px;
+            margin-top: -30px;
+            display: block;
+            border: 2px solid rgba(0,0,0,1.00);
+            width: 100px;
+            padding-left: 13px;
+        }
+        
+        #buttonbox {
+            width: 500px;
+            position: relative;
+            top: 65%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    
+        
+        </style>
 </head>
-<body><nav><div class="h1">
-	<a href="https://womborocks.bandcamp.com/" target="_blank"><img src="images/wombogif.gif" height="100" alt="womborocks"></a>
-    
- 
-    <button id="play"><img src="images/startbutton.png" height="70" alt="start"></button><br>
-    <div id="hand"><img src="images/handworld.png" width="280" height="171" alt="hand"></div>
-    <div id="recycle"><img src="images/womborecycle.gif" width="75%" height="75%" alt="recycle"></div>
-   
-    </div>
-    
-</nav>
-	
 
-<div class="logline">
-	<video id="9x16" width="315" height="560"><source src="images/Wombo-Live-9-16.mp4" type="video/mp4"></video>
-	</div>
-	
-<div class="iconbox">
-   <video id="16x9" width="560" height="315"><source src="images/Wombo-Live-16-9.mp4" type="video/mp4"></video> </div>
-    
-    <div id="worldwide"><img src="images/worldwide.gif" width="75%" height="75%" alt="worldwide"></div>
-    <div id="network"><img src="images/networksolutions.png" alt="network"></div>
-    <div id="vert"><img src="images/vertworldwide.png" width="157" height="327" alt="vert"></div>
-    <div id="stork"><img src="images/wombostork.png" width="65%" height="65%" alt="stork"></div>
-    <div id="www"><img src="images/womborwww.png" width="65%" height="65%" alt="www"></div>
-    <div id="logistics"><img src="images/wombologistics.png" alt="logistics"></div>
-    <div id="graph"><img src="images/wombograph.gif" width="300" height="300" alt="graph"></div>
-    <div id="sports"><img src="images/womboworldwidelarge.png" width="250" height="82" alt="sportslogo"></div>
-    <div id="barb"><img src="images/wombobarbring.gif" width="35%" height="35%" alt="barb"></div>
-    
-    <div class="chatbox"><video id="chat" width="325" height="325"><source src="images/wombochat.mp4" type="video/mp4"></video></div>
-    
-	
-    
-    <script src="./Wombo-Live.com_files/rivescript.min.js"></script>
-    
-    <script>
-	 const $video1 = document.getElementById('16x9');
-    const $video2 = document.getElementById('9x16');
-    const $video3 = document.getElementById('chat');
-    const $play = document.getElementById('play');
-
-    const playVideo = () => {
-        $video1.play();
-        $video2.play();
-        $video3.play();
-    };
-    
-    $play.addEventListener('click', playVideo);
-    </script>
-       
-    <script>
-var vid = document.getElementById("16x9");
-
-function enableMute() { 
-    vid.muted = true;
+    <body>
+        <nav>
+        <div class="h1"><a id="fpheadertext" onclick="photocloseFunction()">FRESH PRODUCE</a><a id="equiptext" onclick="overviewFunction()">EQUIPMENT</a>
+            <a id="contacttext" onclick="contactcloseFunction()">CONTACT</a>
+        <svg id="headerlines" width="1000">
+        <line x1="170" y1="0" x2="170" y2="32" style="stroke:rgb(225,225,225);stroke-width:2"/>
+        <line x1="300" y1="0" x2="300" y2="32" style="stroke:rgb(225,225,225);stroke-width:2"/>
+        </svg></div></nav>
+        
+        
+        <div id="main">
+            <div id="fpheaderlogo"><img src="images/FPheaderlogo.png" width="180" height="98" alt="freshproduce"></div>
+            
+            <div id="giflogo"><img src="images/logogif.gif" width="80%" alt="logogif"></div>
+            
+            <div id="buttonbox">
+                <div id="equipgif"><img src="images/equipgif.gif" width="200" alt="equipment" onclick="overviewFunction()"><strong id="equipgiftext" onclick="overviewFunction()">EQUIPMENT</strong></div> 
+                <div id="studiogif"><img src="images/studiogif.gif" width="120" alt="studio" onclick="photocloseFunction()"><strong id="studiogiftext" onclick="photocloseFunction()">STUDIO</strong></div> 
+                <div id="contactgif"><img src="images/contactgif.gif" width="260" alt="contact" onclick="contactcloseFunction()"><strong id="contactgiftext" onclick="contactcloseFunction()">CONTACT</strong></div> 
+                </div>
+            
+            
+            <div id="border">
+                 <div class="photos" id="photos"><button class="close-button-equip" aria-label="Close alert" type="button" onclick="photocloseFunction()">
+                     <span aria-hidden="true">&times;</span></button>
+                     <img src="images/PhotoTop.png" alt="pics"><div id="pics">
+                     <img class="mySlides" src="images/Wombo4 (1 of 1).jpeg" width="320" alt="wombo1">
+                    <img class="mySlides" src="images/sddy4 (1 of 1).jpeg" height="275" alt="wombo2">
+                    <img class="mySlides" src="images/Cameron (1 of 1).jpeg" height="275" alt="wombo3">
+                     <button class="w3-button w3-white w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-white w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                     </div></div>
+            <div class="equip" id="equip"><button class="close-button-equip" aria-label="Close alert" type="button" onclick="overviewFunction()">
+                     <span aria-hidden="true">&times;</span></button>
+                <img src="images/EquipTop.png" alt="equipment">
+                <div id="gear">
+                <center><strong><br>MICROPHONES</strong></center><br>
+                <ins>Condenser (Small and Large Diaphragm)</ins><small><br>AKG 414ULS<br>AKG 451E w/CK1 and CK2 Capsules (2)
+               <br>Audio Technica 4033 (2)<br>Beyerdynamic D57c
+               <br>Oktava MK-012 modded w/Omni, Cardioid and Hypercardioid Capsules (2)<br>Shure Beta91A<br>Shure Beta98
+               <br>Shure KSM141 (2)<br>Warm Audio WA47JR</small><br><br>
+                <ins>Ribbon</ins><br><small>Royer R10 Ribbon (2)</small><br>
+                <br><ins>Dynamic</ins><br><small>Royer R10 Ribbon (2)<br>Audix OM6<br>Audix OM7<br>AKG D112<br>Beyerdynamic M201
+                <br>Beyerdynamic M88 (2)<br>Electro-Voice 636 Slimair<br>Electro-Voice 664a<br>Electro-Voice RE-11
+                <br>Electro-Voice RE20<br>Sennheiser MD431<br>Shure KSM8 Dualdyne<br>Shure SM57 (3)<br>Shure SM7b
+                <br>Sony F96<br></small><br>
+                 <ins>DI’s</ins><br><small>BSS AR133 Active (2)<br>Radial JDI (2)</small><br>
+                <center><strong><br>OUTBOARD</strong></center><br>
+                 <ins>Preamps</ins><br><small>Retro 500 PRE (tube)<br>CAPI VP26 (2)<br>Golden Age PRE73 MKII (2)</small><br><br>
+                  <ins>Dynamics/FX</ins><br><small>Alesis MicroVerb 4<br>Ashly SG33 Dual Gate<br>DBX 119 Compander<br>DBX 160x
+                <br>DBX 263x (2)<br>FMR RNC1773<br>Golden Age Comp 3A (2)<br>TC Electronic M-One XL<br>Yamaha Pro R3</small><br><br><center><strong><br>RECORDERS</strong></center>
+                 <br>Avid Pro Tools<br>Reaper<br>Logic Pro X<br>Conversion via Universal Audio and Apogee<br>
+                <br><center><strong><br>MONITORING</strong></center>
+                 <br>Dynaudio BM6a MKIII (2)<br>Auratone 5C (1)<br>NHT CS10 Subwoofer<br>
+                <br><center><strong><br>INSTRUMENTS</strong></center><br>
+                 <ins>Drums</ins><br><small>1972 Rogers Powertone (12, 13, 16, 22)<br>1940’s Leedy Bass Drum (26)<br>No Name 1970’s Japan Kit (12, 14, 20)<br>1960’s Ludwig Supraphonic (5x14)<br>1970’s Ludwig Acrolite (5x14)<br>1970’s Ludwig Marching Snare (8x15)<br>Assortment of Vintage Zildjian cymbals</small><br><br>
+                 <ins>Amplifiers</ins><br><small>Vox AC15<br>Peavey Stereo Chorus 212<br>Silvertone 60 BXL</small><br><br>
+                 <ins>Guitar</ins><br><small>Fender Classic Player Jazzmaster</small><br><br>
+                 <ins>Pianos</ins><br><small>Four Pianos</small><br><br>
+                 <ins>Organs/Electric Piano</ins><br><small>Hammond M2<br>2x Balwin Organs<br>Yamaha CP30</small><br><br>
+                 <ins>Cheap Synths</ins><br><small>Casio MT-400V<br>Realistic Concertmate 670</small>
+                </div></div>
+                <div class="contact" id="contact"><button class="close-button-equip" aria-label="Close alert" type="button" onclick="contactcloseFunction()">
+                     <span aria-hidden="true">&times;</span></button><img src="images/contactTop.png" alt="contact">
+                <form id="contactform" action="mailto:info@realfreshproduce.biz" method="post" enctype="text/plain"><br>
+  <label for="name">Name</label><br>
+  <input type="text" id="name" name="name" size="35" placeholder="DadsOut, FishingAgain (lol im David)"><br><br>
+  <label for="email">Email</label><br>
+  <input type="text" id="email" name="email" size="35" placeholder="gloriasfavoriteson@davidsmom.com"><br><br>
+    <label for="phone">Phone Number</label><br>
+  <input type="text" id="phone" name="phone" size="35" placeholder="111-222-3333"><br><br>
+  <label for="days">How many days?</label><br>
+<input type="text" id="days" name="days" size="35" placeholder="20-25"><br><br>
+  <label for="when">When?</label><br>
+<input type="text" id="when" name="when" size="35" placeholder="July"><br><br>
+  <label for="songs">Number of Songs</label><br>
+<input type="text" id="songs" name="songs" size="35" placeholder="18 (barely legal lol)"><br><br>
+  <label for="nature">Nature of Project (tracking/mixing/mastering/all)</label><br>
+<input type="text" id="nature" name="nature" size="35" placeholder="What?"><br><br>
+  <label for="instrumentation">Instrumentation</label><br>
+<textarea type="text" id="instrumentation" name="instrumentation" style="width:300px; height:100px;"  placeholder="I shake beans around in delicately tuned “pitch”-ers."></textarea><br><br>
+  <label for="links">Links to social media, former releases, current demos (however rough)</label><br>
+<textarea type="text" id="links" name="links" style="width:300px; height:100px;" placeholder="Davidsmom.com (we’re working on a new site now 😅 )"></textarea><br><br>
+  <label for="notes">Notes</label><br>
+<textarea type="text" id="notes" name="notes" rows="5" cols="33" placeholder="How much is this going to cost?"></textarea><br><br>
+                    <input type="submit" value="Send">
+<input type="reset" value="Reset">
+                    
+</form>
+                </div>
+            
+            
+            
+   <div id="spotify"><div id="spotheader"><img src="images/spotifyheader.png" height="20" width="250" alt="recordedhere"></div>
+       <iframe id="spotifyplayer" src="https://open.spotify.com/embed/playlist/7cCvOomskgc5SIXiAwFL3G" width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
+        
+            </div></div>
+</body>
+ <script>
+	function overviewFunction() {
+  var x = document.getElementById("equip").style;
+  if (x.display === "none"|| x.display == '') {
+    x.display = "block";
+  } else {
+    x.display = "none";
+  }
 }
 </script>
     
-    
-    
-<script>$(function(){
-	$('.iconbox').draggable();		
+    <script>$(function(){
+	$('.equip').draggable();		
 		})
 	</script>
-	
-	<script>$(function(){
-	$('.logline').draggable();		
+    
+     <script>
+	function photocloseFunction() {
+  var x = document.getElementById("photos").style;
+  if (x.display === "none"|| x.display == '') {
+    x.display = "block";
+  } else {
+    x.display = "none";
+  }
+}
+</script>
+    
+    <script>$(function(){
+	$('.photos').draggable();		
 		})
 	</script>
-	
-	
-<script src="./Wombo-Live.com_files/simplebar.min.js"></script>
-	
-	
-<script>
-		let bot = new RiveScript();</script>
-		<script>
-		const message_container = document.querySelector('.messages');
-const form = document.querySelector('form');
-const input_box = document.querySelector('input');
-		
-		const brains = [
-  'https://gist.githubusercontent.com/chadblevy/b27393620712d44c8e6cddd74b5ac6df/raw/96a6c9a3de2e9b47324740fea22aed3ccb1cd888/womboChat'
-];
-		
-bot.loadFile(brains).then(botReady).catch(botNotReady);
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  selfReply(input_box.value);
-  input_box.value = '';
-});
-
-function botReply(message){
-  message_container.innerHTML += `<div class="bot">${message}</div>`;
-  location.href = '#edge';
+    
+      <script>
+	function contactcloseFunction() {
+  var x = document.getElementById("contact").style;
+  if (x.display === "none"|| x.display == '') {
+    x.display = "block";
+  } else {
+    x.display = "none";
+  }
 }
-
-function selfReply(message){
-  message_container.innerHTML += `<div class="self">${message}</div>`;
-  location.href = '#edge';
-  
-  bot.reply("local-user", message).then(function(reply) {
-    botReply(reply);
-  });
-}
-
-function botReady(){
-  bot.sortReplies();
-  botReply('Wombo: Sup!');
-}
-
-function botNotReady(err){
-  console.log("An error has occurred.", err);
-}
-	
+</script>
+    
+    <script>$(function(){
+	$('.contact').draggable();		
+		})
 	</script>
-
-	
-	<script>
-	var redDiv = document.getElementById('red');
-redDiv.onclick = function (e) {
-  var ev = e || window.event;
-  if(e.target !== this)
-    return;
-  console.log('red div was clicked');}
-    </script>
     
 
-	
-	
+   <script>
+var slideIndex = 1;
+showDivs(slideIndex);
 
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
 
-	
-	
-
-	
-
-</body></html>
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+    
+</html>
