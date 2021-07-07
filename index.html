@@ -31,10 +31,11 @@
 	top: 0px;
 	margin-left: -10px;
 	margin-right: -7px;
-	height: 34px;
+	height: 45px;
 	z-index: 10;
 	position: fixed;
 	width: 110%;
+            background-image: url("images/notherbg.png");
 		}
 		
 		.h1 {
@@ -63,8 +64,8 @@
             border: 1px solid #000000;
             border-style: solid;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-            bottom: 100px;
-            right: 10px;
+            bottom: 15px;
+            right: 15px;
             width: 250px;
             height: 100px;
             background-color: rgba(220,218,198,1.00)
@@ -115,8 +116,8 @@
         #border {
             border: 2px solid rgba(0,0,0,1.00);
             width: hidden;
-            height: 600px;
-            margin-top: -90px;
+            height: 610px;
+            margin-top: -80px;
             overflow: auto;
             padding: 25px;
            
@@ -152,7 +153,7 @@
             height: 320px;
             overflow: hidden;
             float: left;
-            margin-top: -10px;
+            margin-top: 0px;
             margin-left: -10px;background-color: rgba(220,218,198,1.00);
             display: none;
         }
@@ -222,9 +223,9 @@
             z-index: 10;
             position: absolute;
             z-index: 1;
-            left: auto;
-            margin-top: 18px;
+            top: -270%;
             left: 20%;
+            transform: translateX(-50%);
             
         }
         
@@ -236,10 +237,9 @@
         
         #equipgiftext {
             font-family: 'Helvetica';
-            margin-left: 35px;
+            margin-left: 32px;
             margin-top: -15px;
             display: block;
-            border: 2px solid rgba(0,0,0,1.00);
             width: 100px;
             padding-left: 3px;
         }
@@ -253,24 +253,22 @@
         #studiogiftext {
             font-family: 'Helvetica';
             margin-left: 0px;
-            margin-top: 5px;
+            margin-top: 9px;
             display: block;
-            border: 2px solid rgba(0,0,0,1.00);
             width: 100px;
             padding-left: 20px;
         }
         
         #contactgif {
             margin-top: -176px;
-            margin-left: 230px;
+            margin-left: 228px;
         }
         
         #contactgiftext {
             font-family: 'Helvetica';
-            margin-left: 70px;
-            margin-top: -30px;
+            margin-left: 68px;
+            margin-top: -26px;
             display: block;
-            border: 2px solid rgba(0,0,0,1.00);
             width: 100px;
             padding-left: 13px;
         }
@@ -278,8 +276,8 @@
         #buttonbox {
             width: 400px;
             position: relative;
-            top: 67%;
-            left: 47%;
+            top: 60%;
+            left: 45%;
             transform: translateX(-50%);
         }
         
@@ -293,17 +291,18 @@
         <div class="h1"><a id="fpheadertext" onclick="photocloseFunction()">FRESH PRODUCE</a><a id="equiptext" onclick="overviewFunction()">EQUIPMENT</a>
             <a id="contacttext" onclick="contactcloseFunction()">CONTACT</a>
         <svg id="headerlines" width="1000">
-        <line x1="150" y1="0" x2="150" y2="32" style="stroke:rgb(225,225,225);stroke-width:2"/>
-        <line x1="280" y1="0" x2="280" y2="32" style="stroke:rgb(225,225,225);stroke-width:2"/>
+        <line x1="150" y1="0" x2="150" y2="45" style="stroke:rgb(225,225,225);stroke-width:2"/>
+        <line x1="280" y1="0" x2="280" y2="45" style="stroke:rgb(225,225,225);stroke-width:2"/>
         </svg></div></nav>
         
         
         <div id="main">
             <div id="fpheaderlogo"><img src="images/FPheaderlogo.png" width="180" height="98" alt="freshproduce"></div>
             
-            <div id="giflogo"><img src="images/logogif.gif" width="70%" alt="logogif"></div>
+            
             
             <div id="buttonbox">
+                <div id="giflogo"><img src="images/logogif.gif" width="190%" alt="logogif"></div>
                 <div class="first" id="equipgif"><img src="images/equipgif.gif" width="180" alt="equipment" onclick="overviewFunction()"><strong id="equipgiftext" onclick="overviewFunction()">EQUIPMENT</strong></div> 
                 <div class="second" id="studiogif"><img src="images/studiogif.gif" width="100" alt="studio" onclick="photocloseFunction()"><strong id="studiogiftext" onclick="photocloseFunction()">STUDIO</strong></div> 
                 <div class="third" id="contactgif"><img src="images/contactgif.gif" width="240" alt="contact" onclick="contactcloseFunction()"><strong id="contactgiftext" onclick="contactcloseFunction()">CONTACT</strong></div> 
