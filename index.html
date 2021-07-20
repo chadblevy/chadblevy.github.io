@@ -18,7 +18,7 @@
         body {
             background-image: url("images/notherbg.png");
             overflow: auto;
-            margin-top: 45px;
+            margin-top: 0px;
             
         }
         
@@ -29,12 +29,12 @@
             border: 2px solid #E1E1E1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 	top: 0px;
-	margin-left: -10px;
+	margin-left: 0px;
 	margin-right: -7px;
 	height: 45px;
 	z-index: 10;
-	position: fixed;
-	width: 110%;
+	position: relative;
+	width: 100%;
             background-image: url("images/notherbg.png");
 		}
 		
@@ -56,13 +56,21 @@
             display: block;
         }
         
+        #socialmedia {
+            z-index: 20;
+            position: fixed;
+            bottom: 25px;
+            right: 15px;
+            width: 250px;
+            height: 150px;
+        }
+        
         #spotify {
             z-index: 20;
             position: fixed;
             border: 1px solid #000000;
             border-style: solid;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-            bottom: 15px;
             right: 15px;
             width: 250px;
             height: 100px;
@@ -89,14 +97,14 @@
         #fpheadertext {
             position: absolute;
             color: rgba(225,225,225,1.00);
-            margin-top: 7px;
+            margin-top: 10px;
             margin-left: 5px;
         }
         
         #equiptext {
             position: absolute;
             color: rgba(225,225,225,1.00);
-            margin-top: 7px;
+            margin-top: 10px;
             margin-left: 160px;
         }
         
@@ -107,8 +115,8 @@
         #contacttext {
             position: absolute;
             color: rgba(225,225,225,1.00);
-            margin-top: 6px;
-            margin-left: 290px;
+            margin-top: 10px;
+            margin-left: 270px;
         }
         
         #border {
@@ -148,7 +156,7 @@
             font-size: normal;
             border: 2px solid rgba(0,0,0,1.00);
             width: 320px;
-            height: 320px;
+            height: 370px;
             overflow: hidden;
             float: left;
             margin-top: -605px;
@@ -200,9 +208,11 @@
         }
         
          #pics {
+             margin-top: 0px;
             width: 320px;
-            height: 275px;
+            height: 325px;
              background: rgba(249,245,182,1.00);
+             border-top: 2px solid rgba(0,0,0,1.00);
              
         }
         
@@ -251,7 +261,7 @@
         
         #studiogiftext {
             font-family: 'Helvetica';
-            margin-left: 0px;
+            margin-left: 4px;
             margin-top: 9px;
             display: block;
             width: 100px;
@@ -280,7 +290,21 @@
             transform: translateX(-50%);
         }
         
-    
+        .w3-button {
+            margin-top: -123px;
+            height: 34px;
+            width: 10%;
+            background-color: gray;
+        }
+        #instalogo {
+            margin-top: 110px;
+            margin-left: 150px;
+        }
+        
+        #spotifylogo {
+            margin-top: 110px;
+            margin-left: 10px;
+        }
         
         </style>
 </head>
@@ -290,8 +314,8 @@
         <div class="h1"><a id="fpheadertext" onclick="photocloseFunction()">FRESH PRODUCE</a><a id="equiptext" onclick="overviewFunction()">EQUIPMENT</a>
             <a id="contacttext" onclick="contactcloseFunction()">CONTACT</a>
         <svg id="headerlines" width="1000">
-        <line x1="150" y1="0" x2="150" y2="45" style="stroke:rgb(225,225,225);stroke-width:2"/>
-        <line x1="280" y1="0" x2="280" y2="45" style="stroke:rgb(225,225,225);stroke-width:2"/>
+        <line x1="150" y1="0" x2="150" y2="43" style="stroke:rgb(225,225,225);stroke-width:2"/>
+        <line x1="260" y1="0" x2="260" y2="43" style="stroke:rgb(225,225,225);stroke-width:2"/>
         </svg></div></nav>
         
         
@@ -299,31 +323,44 @@
             <div id="fpheaderlogo"><img src="images/FPheaderlogo.png" width="180" height="98" alt="freshproduce"></div>
             
             
-            
             <div id="buttonbox">
                 <div id="giflogo"><img src="images/logogif.gif" width="190%" alt="logogif"></div>
                 <div class="first" id="equipgif"><img src="images/equipgif.gif" width="180" alt="equipment" onclick="overviewFunction()"><strong id="equipgiftext" onclick="overviewFunction()">EQUIPMENT</strong></div> 
-                <div class="second" id="studiogif"><img src="images/studiogif.gif" width="100" alt="studio" onclick="photocloseFunction()"><strong id="studiogiftext" onclick="photocloseFunction()">STUDIO</strong></div> 
+                <div class="second" id="studiogif"><img src="images/studiogif.gif" width="100" alt="studio" onclick="photocloseFunction()"><strong id="studiogiftext" onclick="photocloseFunction()">ABOUT</strong></div> 
                 <div class="third" id="contactgif"><img src="images/contactgif.gif" width="240" alt="contact" onclick="contactcloseFunction()"><strong id="contactgiftext" onclick="contactcloseFunction()">CONTACT</strong></div> 
                 </div>
             
             
             <div id="border">
                  
-            
-            
-            
+        <div id="socialmedia">   
    <div id="spotify"><div id="spotheader"><img src="images/spotifyheader.png" height="20" width="250" alt="recordedhere"></div>
        <iframe id="spotifyplayer" src="https://open.spotify.com/embed/playlist/7cCvOomskgc5SIXiAwFL3G" width="250" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
+          <a href="https://www.instagram.com/realfreshproduce/" target="_blank"> 
+              <img id="instalogo" src="images/FPinstagram.png" width="40" alt="instagram"></a> 
+            <a href="https://open.spotify.com/playlist/7cCvOomskgc5SIXiAwFL3G?utm_source=embed_v2&go=1&play=1&nd=1" target="_blank">
+                <img id="spotifylogo" src="images/FPspotifylogo.png" width="40" alt="spotify"></a>
+                </div> 
         
             </div></div>
         
         <div class="photos" id="photos"><button class="close-button-equip" aria-label="Close alert" type="button" onclick="photocloseFunction()">
                      <span aria-hidden="true">&times;</span></button>
-                     <img src="images/PhotoTop.png" alt="pics"><div id="pics">
+                     <img src="images/PhotoTop.png" alt="pics">
+            <div id="pics">
+                <img class="mySlides" src="images/FPabouttextpic.png" height="325" alt="about">
                      <img class="mySlides" src="images/Wombo4 (1 of 1).jpeg" width="320" alt="wombo1">
-                    <img class="mySlides" src="images/sddy4 (1 of 1).jpeg" height="275" alt="wombo2">
-                    <img class="mySlides" src="images/Cameron (1 of 1).jpeg" height="275" alt="wombo3">
+                    <img class="mySlides" src="images/sddy4 (1 of 1).jpeg" height="325" alt="wombo2">
+                    <img class="mySlides" src="images/Cameron (1 of 1).jpeg" height="325" alt="wombo3">
+            <img class="mySlides" src="images/mic_amp.jpg" height="325" alt="mic_amp">
+                <img class="mySlides" src="images/drums1.jpg" height="325" alt="drums1">
+                <img class="mySlides" src="images/drums2.jpg" height="325" alt="drums2">
+                <img class="mySlides" src="images/drums3.jpg" height="325" alt="drums3">
+                <img class="mySlides" src="images/drums4.png" height="325" alt="drums4">
+                <img class="mySlides" src="images/wombodrums.jpg" height="325" alt="wombodrums">
+                <img class="mySlides" src="images/amp1.png" height="325" alt="amp1">
+                <img class="mySlides" src="images/amplight.jpg" height="325" alt="amplight">
+                <img class="mySlides" src="images/mic_speaker.png" height="325" alt="micspeaker">
                      <button class="w3-button w3-white w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-white w3-display-right" onclick="plusDivs(1)">&#10095;</button>
                      </div></div>
@@ -336,8 +373,8 @@
                <br>Audio Technica 4033 (2)<br>Beyerdynamic D57c
                <br>Oktava MK-012 modded w/Omni, Cardioid and Hypercardioid Capsules (2)<br>Shure Beta91A<br>Shure Beta98
                <br>Shure KSM141 (2)<br>Warm Audio WA47JR</small><br><br>
-                <ins>Ribbon</ins><br><small>Royer R10 Ribbon (2)</small><br>
-                <br><ins>Dynamic</ins><br><small>Royer R10 Ribbon (2)<br>Audix OM6<br>Audix OM7<br>AKG D112<br>Beyerdynamic M201
+                <ins>Ribbon</ins><br><small>Royer R10 (2)</small><br><small>Beyerdynamic m160 (2)</small><br>
+                <br><ins>Dynamic</ins><br><small>Audix OM6<br>Audix OM7<br>AKG D112<br>Beyerdynamic M201
                 <br>Beyerdynamic M88 (2)<br>Electro-Voice 636 Slimair<br>Electro-Voice 664a<br>Electro-Voice RE-11
                 <br>Electro-Voice RE20<br>Sennheiser MD431<br>Shure KSM8 Dualdyne<br>Shure SM57 (3)<br>Shure SM7b
                 <br>Sony F96<br></small><br>
@@ -357,29 +394,42 @@
                  <ins>Organs/Electric Piano</ins><br><small>Hammond M2<br>2x Balwin Organs<br>Yamaha CP30</small><br><br>
                  <ins>Cheap Synths</ins><br><small>Casio MT-400V<br>Realistic Concertmate 670</small>
                 </div></div>
-                <div class="contact" id="contact"><button class="close-button-equip" aria-label="Close alert" type="button" onclick="contactcloseFunction()">
+                
+        
+        <div class="contact" id="contact"><button class="close-button-equip" aria-label="Close alert" type="button" onclick="contactcloseFunction()">
                      <span aria-hidden="true">&times;</span></button><img src="images/contactTop.png" alt="contact">
                 <form id="contactform" action="mailto:info@realfreshproduce.biz" method="post" enctype="text/plain"><br>
-  <label for="name">Name</label><br>
-  <input type="text" id="name" name="name" size="35" placeholder="DadsOut, FishingAgain (lol im David)"><br><br>
+                    <strong>For general inquires email:</strong> 
+                    <a href="mailto:info@realfreshproduce.biz">info@realfreshproduce.biz</a><br>
+         <br><strong>Booking Inquires</strong> 
+        <br> <label for="name">Name</label><br>
+  <input type="text" id="name" name="name" size="35" placeholder=""><br><br>
   <label for="email">Email</label><br>
-  <input type="text" id="email" name="email" size="35" placeholder="gloriasfavoriteson@davidsmom.com"><br><br>
+  <input type="text" id="email" name="email" size="35" placeholder=""><br><br>
     <label for="phone">Phone Number</label><br>
-  <input type="text" id="phone" name="phone" size="35" placeholder="111-222-3333"><br><br>
+  <input type="text" id="phone" name="phone" size="35" placeholder=""><br><br>
   <label for="days">How many days?</label><br>
-<input type="text" id="days" name="days" size="35" placeholder="20-25"><br><br>
+<input type="text" id="days" name="days" size="35" placeholder=""><br><br>
   <label for="when">When?</label><br>
-<input type="text" id="when" name="when" size="35" placeholder="July"><br><br>
+<input type="text" id="when" name="when" size="35" placeholder=""><br><br>
   <label for="songs">Number of Songs</label><br>
-<input type="text" id="songs" name="songs" size="35" placeholder="18 (barely legal lol)"><br><br>
-  <label for="nature">Nature of Project (tracking/mixing/mastering/all)</label><br>
-<input type="text" id="nature" name="nature" size="35" placeholder="What?"><br><br>
+<input type="text" id="songs" name="songs" size="35" placeholder=""><br><br>
+  <label for="nature">Nature of Project</label><br>
+<input type="checkbox" id="nature1" name="nature">
+    <label for="nature">Tracking</label><br>
+    <input type="checkbox" id="nature2" name="nature">
+     <label for="nature">Mixing</label><br>
+    <input type="checkbox" id="nature3" name="nature">
+                     <label for="nature">Mastering</label><br>
+       <input type="checkbox" id="nature4" name="nature">
+                     <label for="nature">All</label><br>             
+                    <br>
   <label for="instrumentation">Instrumentation</label><br>
-<textarea type="text" id="instrumentation" name="instrumentation" style="width:300px; height:100px;"  placeholder="I shake beans around in delicately tuned “pitch”-ers."></textarea><br><br>
+<textarea type="text" id="instrumentation" name="instrumentation" style="width:300px; height:100px;"  placeholder=""></textarea><br><br>
   <label for="links">Links to social media, former releases, current demos (however rough)</label><br>
-<textarea type="text" id="links" name="links" style="width:300px; height:100px;" placeholder="Davidsmom.com (we’re working on a new site now 😅 )"></textarea><br><br>
+<textarea type="text" id="links" name="links" style="width:300px; height:100px;" placeholder=""></textarea><br><br>
   <label for="notes">Notes</label><br>
-<textarea type="text" id="notes" name="notes" rows="5" cols="33" placeholder="How much is this going to cost?"></textarea><br><br>
+<textarea type="text" id="notes" name="notes" rows="5" cols="33" placeholder=""></textarea><br><br>
                     <input type="submit" value="Send">
 <input type="reset" value="Reset">
                     
